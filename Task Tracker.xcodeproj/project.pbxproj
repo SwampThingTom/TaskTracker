@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		E04E5FFA24A2991400090C71 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E5FF924A2991400090C71 /* Tests_iOS.swift */; };
 		E04E600524A2991400090C71 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E600424A2991400090C71 /* Tests_macOS.swift */; };
-		E04E600724A2991400090C71 /* Task_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E5FDE24A2991100090C71 /* Task_TrackerApp.swift */; };
-		E04E600824A2991400090C71 /* Task_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E5FDE24A2991100090C71 /* Task_TrackerApp.swift */; };
-		E04E600924A2991400090C71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E5FDF24A2991100090C71 /* ContentView.swift */; };
-		E04E600A24A2991400090C71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E5FDF24A2991100090C71 /* ContentView.swift */; };
+		E04E600724A2991400090C71 /* TaskTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E5FDE24A2991100090C71 /* TaskTrackerApp.swift */; };
+		E04E600824A2991400090C71 /* TaskTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E5FDE24A2991100090C71 /* TaskTrackerApp.swift */; };
+		E04E600924A2991400090C71 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E5FDF24A2991100090C71 /* TaskListView.swift */; };
+		E04E600A24A2991400090C71 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E5FDF24A2991100090C71 /* TaskListView.swift */; };
 		E04E600B24A2991400090C71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04E5FE024A2991400090C71 /* Assets.xcassets */; };
 		E04E600C24A2991400090C71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04E5FE024A2991400090C71 /* Assets.xcassets */; };
+		E04E601C24A2A89B00090C71 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E601B24A2A89B00090C71 /* Task.swift */; };
+		E04E601D24A2A89B00090C71 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E601B24A2A89B00090C71 /* Task.swift */; };
+		E097077924A2B47800E21664 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097077824A2B47800E21664 /* TaskStore.swift */; };
+		E097077A24A2B47800E21664 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097077824A2B47800E21664 /* TaskStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E04E5FDE24A2991100090C71 /* Task_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_TrackerApp.swift; sourceTree = "<group>"; };
-		E04E5FDF24A2991100090C71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E04E5FDE24A2991100090C71 /* TaskTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTrackerApp.swift; sourceTree = "<group>"; };
+		E04E5FDF24A2991100090C71 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		E04E5FE024A2991400090C71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E04E5FE524A2991400090C71 /* Task Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04E5FE824A2991400090C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		E04E600024A2991400090C71 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04E600424A2991400090C71 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		E04E600624A2991400090C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E04E601B24A2A89B00090C71 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		E097077824A2B47800E21664 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +104,10 @@
 		E04E5FDD24A2991100090C71 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				E04E5FDE24A2991100090C71 /* Task_TrackerApp.swift */,
-				E04E5FDF24A2991100090C71 /* ContentView.swift */,
+				E04E5FDE24A2991100090C71 /* TaskTrackerApp.swift */,
+				E04E5FDF24A2991100090C71 /* TaskListView.swift */,
+				E04E601B24A2A89B00090C71 /* Task.swift */,
+				E097077824A2B47800E21664 /* TaskStore.swift */,
 				E04E5FE024A2991400090C71 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -308,8 +316,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E04E600924A2991400090C71 /* ContentView.swift in Sources */,
-				E04E600724A2991400090C71 /* Task_TrackerApp.swift in Sources */,
+				E04E600924A2991400090C71 /* TaskListView.swift in Sources */,
+				E04E601C24A2A89B00090C71 /* Task.swift in Sources */,
+				E097077924A2B47800E21664 /* TaskStore.swift in Sources */,
+				E04E600724A2991400090C71 /* TaskTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +327,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E04E600A24A2991400090C71 /* ContentView.swift in Sources */,
-				E04E600824A2991400090C71 /* Task_TrackerApp.swift in Sources */,
+				E04E600A24A2991400090C71 /* TaskListView.swift in Sources */,
+				E04E601D24A2A89B00090C71 /* Task.swift in Sources */,
+				E097077A24A2B47800E21664 /* TaskStore.swift in Sources */,
+				E04E600824A2991400090C71 /* TaskTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

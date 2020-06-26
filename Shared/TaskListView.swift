@@ -23,12 +23,8 @@ struct TaskListView: View {
                 .onDelete(perform: deleteTasks)
             }
             .navigationTitle("Tasks")
-            .toolbar {
-                #if os(iOS)
-                EditButton()
-                #endif
-                Button("Add", action: addTask)
-            }
+            .navigationBarItems(leading: Button("Add", action: addTask),
+                                trailing: EditButton())
         }
     }
     

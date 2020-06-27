@@ -24,6 +24,9 @@ struct TaskListView: View {
                                     Text("CURRENT")
                                     Image(systemName: "clock")
                                 }
+                                .padding(5)
+                                .background(Color.orange)
+                                .cornerRadius(40)
                             }
                         } else {
                             Button(action: toggleCurrentTask(task)) {

@@ -19,6 +19,12 @@
 		E04E601D24A2A89B00090C71 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E601B24A2A89B00090C71 /* Task.swift */; };
 		E097077924A2B47800E21664 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097077824A2B47800E21664 /* TaskStore.swift */; };
 		E097077A24A2B47800E21664 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097077824A2B47800E21664 /* TaskStore.swift */; };
+		E0B467FB24A7AC5D001A300E /* StartTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B467FA24A7AC5D001A300E /* StartTaskButton.swift */; };
+		E0B467FC24A7AC5D001A300E /* StartTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B467FA24A7AC5D001A300E /* StartTaskButton.swift */; };
+		E0B467FE24A7AE94001A300E /* StopTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B467FD24A7AE94001A300E /* StopTaskButton.swift */; };
+		E0B467FF24A7AE94001A300E /* StopTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B467FD24A7AE94001A300E /* StopTaskButton.swift */; };
+		E0B4680124A7B07A001A300E /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B4680024A7B07A001A300E /* TaskRow.swift */; };
+		E0B4680224A7B07A001A300E /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B4680024A7B07A001A300E /* TaskRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,9 @@
 		E04E600624A2991400090C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E04E601B24A2A89B00090C71 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		E097077824A2B47800E21664 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
+		E0B467FA24A7AC5D001A300E /* StartTaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTaskButton.swift; sourceTree = "<group>"; };
+		E0B467FD24A7AE94001A300E /* StopTaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTaskButton.swift; sourceTree = "<group>"; };
+		E0B4680024A7B07A001A300E /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +125,9 @@
 				E003A8E024A7A6CA0029184C /* Model */,
 				E04E5FDE24A2991100090C71 /* TaskTrackerApp.swift */,
 				E04E5FDF24A2991100090C71 /* TaskListView.swift */,
+				E0B4680024A7B07A001A300E /* TaskRow.swift */,
+				E0B467FA24A7AC5D001A300E /* StartTaskButton.swift */,
+				E0B467FD24A7AE94001A300E /* StopTaskButton.swift */,
 				E04E5FE024A2991400090C71 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -324,9 +336,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0B467FE24A7AE94001A300E /* StopTaskButton.swift in Sources */,
 				E04E600924A2991400090C71 /* TaskListView.swift in Sources */,
+				E0B467FB24A7AC5D001A300E /* StartTaskButton.swift in Sources */,
 				E04E601C24A2A89B00090C71 /* Task.swift in Sources */,
 				E097077924A2B47800E21664 /* TaskStore.swift in Sources */,
+				E0B4680124A7B07A001A300E /* TaskRow.swift in Sources */,
 				E04E600724A2991400090C71 /* TaskTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,9 +350,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0B467FF24A7AE94001A300E /* StopTaskButton.swift in Sources */,
 				E04E600A24A2991400090C71 /* TaskListView.swift in Sources */,
+				E0B467FC24A7AC5D001A300E /* StartTaskButton.swift in Sources */,
 				E04E601D24A2A89B00090C71 /* Task.swift in Sources */,
 				E097077A24A2B47800E21664 /* TaskStore.swift in Sources */,
+				E0B4680224A7B07A001A300E /* TaskRow.swift in Sources */,
 				E04E600824A2991400090C71 /* TaskTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,26 +14,7 @@ struct TaskListView: View {
         NavigationView {
             List {
                 ForEach(store.tasks) { task in
-                    HStack {
-                        Text(task.name)
-                            .font(.title)
-                        Spacer()
-                        if task.id == store.currentTask?.id {
-                            Button(action: toggleCurrentTask(task)) {
-                                HStack {
-                                    Text("CURRENT")
-                                    Image(systemName: "clock")
-                                }
-                                .padding(5)
-                                .background(Color.orange)
-                                .cornerRadius(40)
-                            }
-                        } else {
-                            Button(action: toggleCurrentTask(task)) {
-                                Image(systemName: "clock")
-                            }
-                        }
-                    }
+                    TaskRow(task: task)
                 }
                 .onMove(perform: moveTasks)
                 .onDelete(perform: deleteTasks)
@@ -61,12 +42,6 @@ struct TaskListView: View {
     func deleteTasks(offsets: IndexSet) {
         withAnimation {
             store.tasks.remove(atOffsets: offsets)
-        }
-    }
-    
-    func toggleCurrentTask(_ task: Task) -> () -> Void {
-        return {
-            store.toggleCurrentTask(task)
         }
     }
 }

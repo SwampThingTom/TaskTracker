@@ -126,12 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				E003A8E024A7A6CA0029184C /* Model */,
+				E0B4680624A7C208001A300E /* Views */,
 				E04E5FDE24A2991100090C71 /* TaskTrackerApp.swift */,
-				E04E5FDF24A2991100090C71 /* TaskListView.swift */,
-				E0B4680024A7B07A001A300E /* TaskRow.swift */,
-				E0B467FA24A7AC5D001A300E /* StartTaskButton.swift */,
-				E0B467FD24A7AE94001A300E /* StopTaskButton.swift */,
-				E0B4680324A7B681001A300E /* AddTaskView.swift */,
 				E04E5FE024A2991400090C71 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -181,6 +177,18 @@
 				E04E600624A2991400090C71 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		E0B4680624A7C208001A300E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0B4680324A7B681001A300E /* AddTaskView.swift */,
+				E0B467FA24A7AC5D001A300E /* StartTaskButton.swift */,
+				E0B467FD24A7AE94001A300E /* StopTaskButton.swift */,
+				E04E5FDF24A2991100090C71 /* TaskListView.swift */,
+				E0B4680024A7B07A001A300E /* TaskRow.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

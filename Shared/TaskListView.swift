@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TaskListView: View {
     @EnvironmentObject var store: TaskStore
+    @State var addTaskModalIsPresented = false
     
     var body: some View {
         NavigationView {
@@ -20,16 +21,21 @@ struct TaskListView: View {
                 .onDelete(perform: deleteTasks)
             }
             .navigationTitle("Tasks")
-            .navigationBarItems(leading: Button("Add", action: addTask),
+            .navigationBarItems(leading: Button("Add", action: showAddTaskModal),
                                 trailing: EditButton())
+            .sheet(isPresented: $addTaskModalIsPresented, onDismiss: nil) {
+                AddTaskView(onAdd: addTask)
+            }
         }
     }
     
-    func addTask() {
+    func showAddTaskModal() {
+        addTaskModalIsPresented = true
+    }
+    
+    func addTask(task: Task) {
         withAnimation {
-            store.tasks.append(
-                Task(name: "New Task")
-            )
+            store.tasks.append(task)
         }
     }
     

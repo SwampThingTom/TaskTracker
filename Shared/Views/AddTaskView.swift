@@ -27,7 +27,7 @@ struct AddTaskView: View {
     }
     
     func add() {
-        let task = Task(name: taskName)
+        let task = Task(name: taskName, color: .color8)
         onAdd(task)
         self.presentation.wrappedValue.dismiss()
     }
@@ -38,8 +38,12 @@ struct AddTaskView: View {
 }
 
 struct AddTaskView_Previews: PreviewProvider {
-    
     static var previews: some View {
-        AddTaskView(onAdd: { task in })
+        Group {
+            AddTaskView(onAdd: { task in })
+                .preferredColorScheme(.light)
+            AddTaskView(onAdd: { task in })
+                .preferredColorScheme(.dark)
+        }
     }
 }

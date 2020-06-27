@@ -9,7 +9,8 @@ import SwiftUI
 
 struct AddTaskView: View {
     @Environment(\.presentationMode) var presentation
-    @State var taskName: String = ""
+    @State var taskName = ""
+    @State var color = TaskColor.color1
     let onAdd: (Task) -> Void
     
     var body: some View {
@@ -18,6 +19,7 @@ struct AddTaskView: View {
                 TextField("New task...", text: $taskName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(EdgeInsets(top: 20, leading: 8, bottom: 8, trailing: 8))
+                ColorPickerView(selectedColor: $color)
                 Spacer()
             }
             .navigationBarTitle("Add Task", displayMode: .inline)
@@ -27,7 +29,7 @@ struct AddTaskView: View {
     }
     
     func add() {
-        let task = Task(name: taskName, color: .color8)
+        let task = Task(name: taskName, color: color)
         onAdd(task)
         self.presentation.wrappedValue.dismiss()
     }

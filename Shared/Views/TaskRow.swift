@@ -13,10 +13,13 @@ struct TaskRow: View {
     
     var body: some View {
         HStack {
-            Text(task.name)
-                .font(.title)
+            VStack(alignment: .leading) {
+                Text(task.name)
+                    .font(.title)
+                Text(task.totalTimeDisplay)
+            }
             Spacer()
-            if task.id == store.currentTask?.id {
+            if task.id == store.currentTaskID {
                 StopTaskButton(action: toggleCurrentTask(task))
             } else {
                 StartTaskButton(action: toggleCurrentTask(task))
@@ -28,5 +31,15 @@ struct TaskRow: View {
         return {
             store.toggleCurrentTask(task)
         }
+    }
+}
+
+extension Task {
+    var totalTimeDisplay: String {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .positional
+        formatter.allowedUnits = [ .hour, .minute ]
+        formatter.zeroFormattingBehavior = [ .pad ]
+        return formatter.string(from: totalTime) ?? ""
     }
 }

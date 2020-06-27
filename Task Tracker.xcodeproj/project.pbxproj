@@ -17,6 +17,8 @@
 		E04E600C24A2991400090C71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04E5FE024A2991400090C71 /* Assets.xcassets */; };
 		E04E601C24A2A89B00090C71 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E601B24A2A89B00090C71 /* Task.swift */; };
 		E04E601D24A2A89B00090C71 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04E601B24A2A89B00090C71 /* Task.swift */; };
+		E07E37A224A7C5ED00C1DE8E /* ActiveTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07E37A124A7C5ED00C1DE8E /* ActiveTime.swift */; };
+		E07E37A324A7C5ED00C1DE8E /* ActiveTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07E37A124A7C5ED00C1DE8E /* ActiveTime.swift */; };
 		E097077924A2B47800E21664 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097077824A2B47800E21664 /* TaskStore.swift */; };
 		E097077A24A2B47800E21664 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097077824A2B47800E21664 /* TaskStore.swift */; };
 		E0B467FB24A7AC5D001A300E /* StartTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B467FA24A7AC5D001A300E /* StartTaskButton.swift */; };
@@ -62,6 +64,7 @@
 		E04E600424A2991400090C71 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		E04E600624A2991400090C71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E04E601B24A2A89B00090C71 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		E07E37A124A7C5ED00C1DE8E /* ActiveTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTime.swift; sourceTree = "<group>"; };
 		E097077824A2B47800E21664 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
 		E0B467FA24A7AC5D001A300E /* StartTaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTaskButton.swift; sourceTree = "<group>"; };
 		E0B467FD24A7AE94001A300E /* StopTaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTaskButton.swift; sourceTree = "<group>"; };
@@ -104,8 +107,9 @@
 		E003A8E024A7A6CA0029184C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E097077824A2B47800E21664 /* TaskStore.swift */,
+				E07E37A124A7C5ED00C1DE8E /* ActiveTime.swift */,
 				E04E601B24A2A89B00090C71 /* Task.swift */,
+				E097077824A2B47800E21664 /* TaskStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +357,7 @@
 				E0B467FB24A7AC5D001A300E /* StartTaskButton.swift in Sources */,
 				E0B4680424A7B681001A300E /* AddTaskView.swift in Sources */,
 				E04E601C24A2A89B00090C71 /* Task.swift in Sources */,
+				E07E37A224A7C5ED00C1DE8E /* ActiveTime.swift in Sources */,
 				E097077924A2B47800E21664 /* TaskStore.swift in Sources */,
 				E0B4680124A7B07A001A300E /* TaskRow.swift in Sources */,
 				E04E600724A2991400090C71 /* TaskTrackerApp.swift in Sources */,
@@ -368,6 +373,7 @@
 				E0B467FC24A7AC5D001A300E /* StartTaskButton.swift in Sources */,
 				E0B4680524A7B681001A300E /* AddTaskView.swift in Sources */,
 				E04E601D24A2A89B00090C71 /* Task.swift in Sources */,
+				E07E37A324A7C5ED00C1DE8E /* ActiveTime.swift in Sources */,
 				E097077A24A2B47800E21664 /* TaskStore.swift in Sources */,
 				E0B4680224A7B07A001A300E /* TaskRow.swift in Sources */,
 				E04E600824A2991400090C71 /* TaskTrackerApp.swift in Sources */,

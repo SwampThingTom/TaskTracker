@@ -11,10 +11,6 @@ struct Task: Identifiable {
     let id = UUID()
     let name: String
     var currentStartTime: Date?
-    
-    var isCurrentTask: Bool {
-        return currentStartTime != nil
-    }
 }
 
 let previewTasks = [

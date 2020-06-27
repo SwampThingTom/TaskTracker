@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TaskListView: View {
-    @ObservedObject var store: TaskStore
+    @EnvironmentObject var store: TaskStore
     
     var body: some View {
         NavigationView {
@@ -74,9 +74,11 @@ struct TaskListView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TaskListView(store: previewStore)
+            TaskListView()
+                .environmentObject(previewStore)
                 .preferredColorScheme(.light)
-            TaskListView(store: previewStore)
+            TaskListView()
+                .environmentObject(previewStore)
                 .preferredColorScheme(.dark)
         }
     }

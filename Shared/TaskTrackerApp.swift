@@ -8,12 +8,12 @@
 import SwiftUI
 
 @main
-    @StateObject private var store = TaskStore()
 struct TaskTrackerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            TaskListView(store: store)
+            TaskListView()
+                .environmentObject(TaskStore())
         }
     }
 }

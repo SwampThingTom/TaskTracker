@@ -14,9 +14,22 @@ struct TaskListView: View {
         NavigationView {
             List {
                 ForEach(store.tasks) { task in
-                    NavigationLink(destination: Text(task.name)) {
+                    HStack {
                         Text(task.name)
                             .font(.title)
+                        Spacer()
+                        if task.id == store.currentTask?.id {
+                            Button(action: toggleCurrentTask(task)) {
+                                HStack {
+                                    Text("CURRENT")
+                                    Image(systemName: "clock")
+                                }
+                            }
+                        } else {
+                            Button(action: toggleCurrentTask(task)) {
+                                Image(systemName: "clock")
+                            }
+                        }
                     }
                 }
                 .onMove(perform: moveTasks)
@@ -45,6 +58,12 @@ struct TaskListView: View {
     func deleteTasks(offsets: IndexSet) {
         withAnimation {
             store.tasks.remove(atOffsets: offsets)
+        }
+    }
+    
+    func toggleCurrentTask(_ task: Task) -> () -> Void {
+        return {
+            store.toggleCurrentTask(task)
         }
     }
 }

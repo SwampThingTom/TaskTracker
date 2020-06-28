@@ -17,6 +17,8 @@ struct ToggleTaskButton: View {
         Button(action: action) {
             HStack {
                 if elapsedTimeDisplay != nil {
+                    // LATER: Try to get `style: .timer` working
+                    // https://developer.apple.com/documentation/swiftui/text/datestyle/timer
                     Text(elapsedTimeDisplay!)
                         .foregroundColor(.white)
                 }

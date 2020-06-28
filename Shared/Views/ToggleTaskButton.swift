@@ -1,5 +1,5 @@
 //
-//  StopTaskButton.swift
+//  ToggleTaskButton.swift
 //  Task Tracker
 //
 //  Created by Tom Aylesworth on 6/27/20.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct StopTaskButton: View {
-    let elapsedTimeDisplay: String
+struct ToggleTaskButton: View {
+    let elapsedTimeDisplay: String?
     let backgroundColor: Color
     let imageSize: CGFloat
     let action: () -> Void
@@ -16,15 +16,17 @@ struct StopTaskButton: View {
     var body: some View {
         Button(action: action) {
             HStack {
-                Text(elapsedTimeDisplay)
-                    .foregroundColor(.white)
+                if elapsedTimeDisplay != nil {
+                    Text(elapsedTimeDisplay!)
+                        .foregroundColor(.white)
+                }
                 Image(systemName: "clock")
                     .resizable()
                     .frame(width: imageSize, height: imageSize)
-                    .foregroundColor(.white)
+                    .foregroundColor(elapsedTimeDisplay != nil ? .white : .primary)
             }
             .padding(5)
-            .background(backgroundColor)
+            .background(elapsedTimeDisplay != nil ? backgroundColor : .clear)
             .cornerRadius(40)
         }
     }

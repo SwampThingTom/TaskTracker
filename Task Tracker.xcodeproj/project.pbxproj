@@ -27,10 +27,8 @@
 		E07E37AC24A8090400C1DE8E /* TaskTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07E37AA24A8090400C1DE8E /* TaskTimer.swift */; };
 		E097077924A2B47800E21664 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097077824A2B47800E21664 /* TaskStore.swift */; };
 		E097077A24A2B47800E21664 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E097077824A2B47800E21664 /* TaskStore.swift */; };
-		E0B467FB24A7AC5D001A300E /* StartTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B467FA24A7AC5D001A300E /* StartTaskButton.swift */; };
-		E0B467FC24A7AC5D001A300E /* StartTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B467FA24A7AC5D001A300E /* StartTaskButton.swift */; };
-		E0B467FE24A7AE94001A300E /* StopTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B467FD24A7AE94001A300E /* StopTaskButton.swift */; };
-		E0B467FF24A7AE94001A300E /* StopTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B467FD24A7AE94001A300E /* StopTaskButton.swift */; };
+		E0B467FE24A7AE94001A300E /* ToggleTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B467FD24A7AE94001A300E /* ToggleTaskButton.swift */; };
+		E0B467FF24A7AE94001A300E /* ToggleTaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B467FD24A7AE94001A300E /* ToggleTaskButton.swift */; };
 		E0B4680124A7B07A001A300E /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B4680024A7B07A001A300E /* TaskRow.swift */; };
 		E0B4680224A7B07A001A300E /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B4680024A7B07A001A300E /* TaskRow.swift */; };
 		E0B4680424A7B681001A300E /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B4680324A7B681001A300E /* AddTaskView.swift */; };
@@ -75,8 +73,7 @@
 		E07E37A724A7F9AF00C1DE8E /* TaskColor+SwiftUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskColor+SwiftUIColor.swift"; sourceTree = "<group>"; };
 		E07E37AA24A8090400C1DE8E /* TaskTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTimer.swift; sourceTree = "<group>"; };
 		E097077824A2B47800E21664 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
-		E0B467FA24A7AC5D001A300E /* StartTaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTaskButton.swift; sourceTree = "<group>"; };
-		E0B467FD24A7AE94001A300E /* StopTaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTaskButton.swift; sourceTree = "<group>"; };
+		E0B467FD24A7AE94001A300E /* ToggleTaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleTaskButton.swift; sourceTree = "<group>"; };
 		E0B4680024A7B07A001A300E /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		E0B4680324A7B681001A300E /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,11 +195,10 @@
 			children = (
 				E0B4680324A7B681001A300E /* AddTaskView.swift */,
 				E07E37A424A7DEF700C1DE8E /* ColorPickerView.swift */,
-				E0B467FA24A7AC5D001A300E /* StartTaskButton.swift */,
-				E0B467FD24A7AE94001A300E /* StopTaskButton.swift */,
 				E07E37A724A7F9AF00C1DE8E /* TaskColor+SwiftUIColor.swift */,
 				E04E5FDF24A2991100090C71 /* TaskListView.swift */,
 				E0B4680024A7B07A001A300E /* TaskRow.swift */,
+				E0B467FD24A7AE94001A300E /* ToggleTaskButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -364,10 +360,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0B467FE24A7AE94001A300E /* StopTaskButton.swift in Sources */,
+				E0B467FE24A7AE94001A300E /* ToggleTaskButton.swift in Sources */,
 				E07E37A824A7F9AF00C1DE8E /* TaskColor+SwiftUIColor.swift in Sources */,
 				E04E600924A2991400090C71 /* TaskListView.swift in Sources */,
-				E0B467FB24A7AC5D001A300E /* StartTaskButton.swift in Sources */,
 				E0B4680424A7B681001A300E /* AddTaskView.swift in Sources */,
 				E04E601C24A2A89B00090C71 /* Task.swift in Sources */,
 				E07E37AB24A8090400C1DE8E /* TaskTimer.swift in Sources */,
@@ -383,10 +378,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0B467FF24A7AE94001A300E /* StopTaskButton.swift in Sources */,
+				E0B467FF24A7AE94001A300E /* ToggleTaskButton.swift in Sources */,
 				E07E37A924A7F9AF00C1DE8E /* TaskColor+SwiftUIColor.swift in Sources */,
 				E04E600A24A2991400090C71 /* TaskListView.swift in Sources */,
-				E0B467FC24A7AC5D001A300E /* StartTaskButton.swift in Sources */,
 				E0B4680524A7B681001A300E /* AddTaskView.swift in Sources */,
 				E04E601D24A2A89B00090C71 /* Task.swift in Sources */,
 				E07E37AC24A8090400C1DE8E /* TaskTimer.swift in Sources */,

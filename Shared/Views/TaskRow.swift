@@ -20,6 +20,11 @@ struct TaskRow: View {
         return totalTimeDisplay(totalTime)
     }
     
+    var taskElapsedTimeDisplay: String? {
+        guard isCurrentTask else { return nil }
+        return elapsedTimeDisplay(store.currentTaskElapsedTime)
+    }
+    
     var body: some View {
         HStack {
             RoundedRectangle(cornerRadius: 10)
@@ -31,15 +36,12 @@ struct TaskRow: View {
                 )
             Text(task.name)
             Spacer()
-            if isCurrentTask {
-                StopTaskButton(elapsedTimeDisplay: elapsedTimeDisplay(store.currentTaskElapsedTime),
-                               backgroundColor: task.color.color,
-                               imageSize: 30,
-                               action: toggleCurrentTask(task))
-            } else {
-                StartTaskButton(imageSize: 30, action: toggleCurrentTask(task))
-            }
+            ToggleTaskButton(elapsedTimeDisplay: taskElapsedTimeDisplay,
+                             backgroundColor: task.color.color,
+                             imageSize: 30,
+                             action: toggleCurrentTask(task))
         }
+        .animation(.easeInOut)
     }
     
     func toggleCurrentTask(_ task: Task) -> () -> Void {

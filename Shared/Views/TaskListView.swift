@@ -16,6 +16,7 @@ struct TaskListView: View {
             List {
                 ForEach(store.tasks) { task in
                     TaskRow(task: task)
+                        .buttonStyle(PlainButtonStyle())
                 }
                 .onMove(perform: moveTasks)
                 .onDelete(perform: deleteTasks)

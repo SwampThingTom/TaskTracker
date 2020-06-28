@@ -19,10 +19,16 @@ struct Task: Identifiable {
     var currentStartTime: Date?
     var activeTimes: [ActiveTime] = []
     
+    var currentElapsedTime: TimeInterval {
+        guard let startTime = currentStartTime else { return 0 }
+        return Date().timeIntervalSince(startTime)
+    }
+    
     var totalTime: TimeInterval {
-        activeTimes.reduce(0) { (accumulator, time) in
+        let totalActiveTimes = activeTimes.reduce(0) { (accumulator, time) in
             accumulator + time.duration
         }
+        return totalActiveTimes + currentElapsedTime
     }
 }
 

@@ -41,7 +41,7 @@ class TaskStore: ObservableObject {
         currentTaskTotalTime = tasks[taskIndex].totalTime
         currentTaskTimer.start()
     }
-
+    
     private func endCurrentTask() {
         currentTaskTimer.stop()
         guard let taskIndex = tasks.firstIndex(where: { currentTaskID == $0.id }) else { return }
@@ -53,9 +53,8 @@ class TaskStore: ObservableObject {
     
     private func onTimerUpdate() {
         guard let taskIndex = tasks.firstIndex(where: { currentTaskID == $0.id }) else { return }
-        guard let startTime = tasks[taskIndex].currentStartTime else { return }
-        currentTaskElapsedTime = Date().timeIntervalSince(startTime)
-        currentTaskTotalTime = tasks[taskIndex].totalTime + currentTaskElapsedTime
+        currentTaskElapsedTime = tasks[taskIndex].currentElapsedTime
+        currentTaskTotalTime = tasks[taskIndex].totalTime
     }
 }
 

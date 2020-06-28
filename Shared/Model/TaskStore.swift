@@ -10,9 +10,10 @@ import Foundation
 class TaskStore: ObservableObject {
     @Published var tasks: [Task]
     @Published private(set) var currentTaskID: UUID?
+    
+    // LATER: Extract timer from this class because it's only applicable when rendering specific views
     @Published private(set) var currentTaskElapsedTime: TimeInterval = 0
     @Published private(set) var currentTaskTotalTime: TimeInterval = 0
-    
     private lazy var currentTaskTimer = TaskTimer()
     
     init(tasks: [Task] = []) {

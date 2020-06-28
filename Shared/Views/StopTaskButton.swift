@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StopTaskButton: View {
+    let elapsedTimeDisplay: String
     let backgroundColor: Color
     let imageSize: CGFloat
     let action: () -> Void
@@ -15,7 +16,7 @@ struct StopTaskButton: View {
     var body: some View {
         Button(action: action) {
             HStack {
-                Text("CURRENT")
+                Text(elapsedTimeDisplay)
                     .foregroundColor(.white)
                 Image(systemName: "clock")
                     .resizable()

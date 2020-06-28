@@ -23,7 +23,8 @@ struct TaskRow: View {
             Text(task.name)
             Spacer()
             if task.id == store.currentTaskID {
-                StopTaskButton(backgroundColor: task.color.color,
+                StopTaskButton(elapsedTimeDisplay: elapsedTimeDisplay(store.currentTaskElapsedTime),
+                               backgroundColor: task.color.color,
                                imageSize: 30,
                                action: toggleCurrentTask(task))
             } else {
@@ -36,6 +37,14 @@ struct TaskRow: View {
         return {
             store.toggleCurrentTask(task)
         }
+    }
+    
+    func elapsedTimeDisplay(_ interval: TimeInterval) -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .positional
+        formatter.allowedUnits = [ .hour, .minute, .second ]
+        formatter.zeroFormattingBehavior = [ .pad ]
+        return formatter.string(from: interval) ?? ""
     }
 }
 

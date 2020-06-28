@@ -11,6 +11,7 @@ class TaskStore: ObservableObject {
     @Published var tasks: [Task]
     @Published private(set) var currentTaskID: UUID?
     @Published private(set) var currentTaskElapsedTime: TimeInterval = 0
+    @Published private(set) var currentTaskTotalTime: TimeInterval = 0
     
     private lazy var currentTaskTimer = TaskTimer()
     
@@ -36,6 +37,8 @@ class TaskStore: ObservableObject {
     private func startTask(_ task: Task) {
         guard let taskIndex = tasks.firstIndex(where: { task.id == $0.id }) else { return }
         tasks[taskIndex].currentStartTime = Date()
+        currentTaskElapsedTime = 0
+        currentTaskTotalTime = tasks[taskIndex].totalTime
         currentTaskTimer.start()
     }
 
@@ -52,6 +55,7 @@ class TaskStore: ObservableObject {
         guard let taskIndex = tasks.firstIndex(where: { currentTaskID == $0.id }) else { return }
         guard let startTime = tasks[taskIndex].currentStartTime else { return }
         currentTaskElapsedTime = Date().timeIntervalSince(startTime)
+        currentTaskTotalTime = tasks[taskIndex].totalTime + currentTaskElapsedTime
     }
 }
 

@@ -11,18 +11,27 @@ struct TaskRow: View {
     @EnvironmentObject var store: TaskStore
     let task: Task
     
+    var isCurrentTask: Bool {
+        task.id == store.currentTaskID
+    }
+    
+    var taskTotalTimeDisplay: String {
+        let totalTime = isCurrentTask ? store.currentTaskTotalTime : task.totalTime
+        return totalTimeDisplay(totalTime)
+    }
+    
     var body: some View {
         HStack {
             RoundedRectangle(cornerRadius: 10)
                 .fill(task.color.color)
                 .frame(width: 60, height: 60)
                 .overlay(
-                    Text(task.totalTimeDisplay)
+                    Text(taskTotalTimeDisplay)
                         .foregroundColor(.white)
                 )
             Text(task.name)
             Spacer()
-            if task.id == store.currentTaskID {
+            if isCurrentTask {
                 StopTaskButton(elapsedTimeDisplay: elapsedTimeDisplay(store.currentTaskElapsedTime),
                                backgroundColor: task.color.color,
                                imageSize: 30,
@@ -39,17 +48,15 @@ struct TaskRow: View {
         }
     }
     
-    func elapsedTimeDisplay(_ interval: TimeInterval) -> String {
+    func elapsedTimeDisplay(_ elapsedTime: TimeInterval) -> String {
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .positional
         formatter.allowedUnits = [ .hour, .minute, .second ]
         formatter.zeroFormattingBehavior = [ .pad ]
-        return formatter.string(from: interval) ?? ""
+        return formatter.string(from: elapsedTime) ?? ""
     }
-}
-
-extension Task {
-    var totalTimeDisplay: String {
+    
+    func totalTimeDisplay(_ totalTime: TimeInterval) -> String {
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .positional
         formatter.allowedUnits = [ .hour, .minute ]
